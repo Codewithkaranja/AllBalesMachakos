@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shop — All Bales Machakos | Wholesale Mitumba Bales</title>
+    <meta
+      name="description"
+      content="Wholesale mitumba bales — All Bales Machakos. Imported from UK, Canada, China & Scotland. Order on WhatsApp: 0713883630"
+    />
+    <!-- Google Font: Jost -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fbfbfd;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --hot-pink: #ff2d86; /* primary */
+        --sky-blue: #40a9ff; /* secondary */
+        --burnt-orange: #ff7a2d; /* accent */
+        --glass: rgba(255, 255, 255, 0.6);
+        --radius: 14px;
+        --shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.06);
+        --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+        --max-width: 1200px;
+        font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        color-scheme: light;
+      }
+      /* Reset-ish */
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #fff 0%, #fbfbfd 100%);
+        color: #0f1724;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.45;
+        padding-bottom: 80px; /* space for fab */
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+      }
+      /* Container */
+      .container {
+        width: clamp(320px, 92%, 1400px);
+        max-width: var(--max-width);
+        margin: 0 auto;
+      }
+
+      /* HERO */
+      header.hero {
+        margin: 18px auto 28px;
+        padding: 36px;
+        border-radius: 16px;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 45, 134, 0.06),
+          rgba(64, 169, 255, 0.04)
+        );
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .hero-left {
+        min-width: 240px;
+      }
+      h1 {
+        font-family: "Garamond", "Times New Roman", serif;
+        font-size: clamp(20px, 3.2vw, 32px);
+        margin: 0 0 8px;
+        color: var(--hot-pink);
+        letter-spacing: -0.02em;
+      }
+      .subtitle {
+        color: var(--muted);
+        margin: 0 0 12px;
+        font-weight: 600;
+      }
+      .hero-meta {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .pill {
+        background: var(--card);
+        padding: 8px 12px;
+        border-radius: 999px;
+        box-shadow: var(--shadow-sm);
+        font-weight: 600;
+        font-size: 13px;
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .cta-row {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        border: 0;
+        transition: transform 0.14s ease, box-shadow 0.14s ease;
+        text-decoration: none;
+        color: white;
+      }
+      .btn-primary {
+        background: linear-gradient(
+          90deg,
+          var(--hot-pink),
+          var(--burnt-orange)
+        );
+        box-shadow: 0 8px 30px rgba(255, 45, 134, 0.14);
+      }
+      .btn-outline {
+        background: transparent;
+        border: 1px solid rgba(15, 23, 42, 0.06);
+        color: var(--muted);
+      }
+      .btn:active {
+        transform: translateY(1px);
+      }
+      .hero-right {
+        min-width: 220px;
+        text-align: right;
+      }
+      .hero-right p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      /* FILTERS */
+      .filters {
+        margin: 18px 0;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .search {
+        flex: 1 1 260px;
+        display: flex;
+        gap: 8px;
+        background: var(--card);
+        padding: 8px;
+        border-radius: 10px;
+        box-shadow: var(--shadow-sm);
+        align-items: center;
+      }
+      .search input {
+        border: 0;
+        outline: 0;
+        font-size: 15px;
+        padding: 10px;
+        flex: 1;
+        font-weight: 600;
+        background: transparent;
+        font-family: inherit;
+      }
+      .select {
+        background: var(--card);
+        padding: 8px;
+        border-radius: 10px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      select {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        padding: 6px 8px;
+        font-weight: 600;
+      }
+
+      /* GRID */
+      #shop {
+        margin-top: 8px;
+      }
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      @media (min-width: 640px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 920px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (min-width: 1200px) {
+        .grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.16s cubic-bezier(0.2, 0.9, 0.2, 1),
+          box-shadow 0.16s;
+        min-height: 320px;
+        position: relative;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+      }
+      .card .media {
+        aspect-ratio: 16 / 11;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.03),
+          rgba(0, 0, 0, 0.02)
+        );
+      }
+      .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .card-content {
+        padding: 14px;
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+        flex: 1;
+      }
+      .card h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: "Garamond", "Times New Roman", serif;
+        color: #0f1724;
+      }
+      .muted {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .meta-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+      }
+      .meta-left {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .kg {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.6)
+        );
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 13px;
+        box-shadow: var(--shadow-sm);
+      }
+      .card-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+        align-items: center;
+      }
+      .btn-sm {
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .btn-view {
+        background: transparent;
+        border: 1px solid rgba(15, 23, 42, 0.06);
+        color: var(--muted);
+      }
+      .btn-whatsapp {
+        background: linear-gradient(90deg, var(--sky-blue), var(--hot-pink));
+        color: white;
+      }
+
+      /* Footer area for "no results" */
+      .empty {
+        text-align: center;
+        padding: 40px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      /* Floating WhatsApp FAB */
+      .fab {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 9999;
+      }
+      .fab a {
+        display: inline-grid;
+        place-items: center;
+        width: 62px;
+        height: 62px;
+        border-radius: 999px;
+        background: linear-gradient(
+          180deg,
+          var(--hot-pink),
+          var(--burnt-orange)
+        );
+        color: white;
+        box-shadow: 0 12px 36px rgba(255, 45, 134, 0.18);
+        border: 0;
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      /* Product detail overlay (simulates single product page) */
+      .detail-overlay {
+        position: fixed;
+        inset: 0;
+        display: none;
+        z-index: 9998;
+        background: linear-gradient(
+          180deg,
+          rgba(2, 6, 23, 0.6),
+          rgba(2, 6, 23, 0.5)
+        );
+        padding: 28px;
+        overflow: auto;
+      }
+      .detail-sheet {
+        width: clamp(320px, 92%, 1100px);
+        margin: 36px auto;
+        background: linear-gradient(180deg, white, #fff);
+        border-radius: 16px;
+        padding: 18px;
+        box-shadow: var(--shadow-lg);
+        display: grid;
+        gap: 14px;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 920px) {
+        .detail-sheet {
+          grid-template-columns: 1fr 420px;
+        }
+      }
+      .detail-media {
+        border-radius: 12px;
+        overflow: hidden;
+        background: #f7f9fb;
+        padding: 8px;
+      }
+      .detail-meta {
+        padding: 8px 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .detail-meta h2 {
+        margin: 0;
+        font-family: "Garamond", "Times New Roman", serif;
+        color: white;
+        color: var(--hot-pink);
+      }
+      .detail-meta p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .close-detail {
+        position: absolute;
+        right: 26px;
+        top: 26px;
+        background: transparent;
+        border: 0;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      /* small UI niceties */
+      .tag {
+        background: linear-gradient(
+          90deg,
+          var(--sky-blue),
+          rgba(64, 169, 255, 0.2)
+        );
+        padding: 6px 8px;
+        border-radius: 8px;
+        font-weight: 700;
+        color: #022037;
+        font-size: 13px;
+      }
+      .origin {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      /* Accessibility focus */
+      .btn:focus,
+      button:focus,
+      a:focus {
+        outline: 3px solid rgba(64, 169, 255, 0.18);
+        outline-offset: 3px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero" aria-labelledby="hero-heading">
+        <div class="hero-left">
+          <h1 id="hero-heading">Wholesale Mitumba Bales — All Categories</h1>
+          <p class="subtitle">
+            All Bales Machakos | Quality bales imported from UK, Canada, China &
+            Scotland
+          </p>
+
+          <div class="hero-meta">
+            <div class="pill">📦 Wholesale • Machakos</div>
+            <div class="pill">🚚 East Africa delivery</div>
+            <div class="pill">
+              📱 WhatsApp orders:
+              <strong style="margin-left: 6px">0713 883 630</strong>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#shop" aria-label="Shop now"
+              >Shop All Bales</a
+            >
+            <a
+              class="btn btn-outline"
+              href="#contact"
+              aria-label="Contact on TikTok / Facebook"
+              >View Contact</a
+            >
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="false">
+          <p style="font-weight: 800">Head Office — Machakos Town</p>
+          <p class="muted">Asante House, 1st Floor • Opposite Susu Centre</p>
+        </div>
+      </header>
+
+      <!-- FILTERS -->
+      <section class="filters" role="region" aria-label="Shop filters">
+        <div class="search" role="search" aria-label="Search bales">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden
+          >
+            <path
+              d="M21 21l-4.35-4.35"
+              stroke="#9ca3af"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <input
+            id="searchInput"
+            placeholder="Search categories, e.g., 'sweaters', 'duvets'..."
+            aria-label="Search categories"
+          />
+        </div>
+
+        <div class="select">
+          <label for="genderSelect" class="muted" style="font-weight: 700"
+            >Gender</label
+          >
+          <select id="genderSelect" aria-label="Filter by gender">
+            <option value="all">All</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="kids">Kids</option>
+            <option value="mixed">Mixed</option>
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="originSelect" class="muted" style="font-weight: 700"
+            >Origin</label
+          >
+          <select id="originSelect" aria-label="Filter by origin">
+            <option value="all">All</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
+            <option value="Scotland">Scotland</option>
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="typeSelect" class="muted" style="font-weight: 700"
+            >Type</label
+          >
+          <select id="typeSelect" aria-label="Filter by type">
+            <option value="all">All Types</option>
+            <option value="clothes">Clothes</option>
+            <option value="bedding">Bedding</option>
+            <option value="winter">Winter Wear</option>
+            <option value="underwear">Underwear</option>
+          </select>
+        </div>
+
+        <div style="margin-left: auto; display: flex; gap: 8px">
+          <button
+            id="clearFilters"
+            class="btn btn-outline btn-sm"
+            title="Clear filters"
+          >
+            Clear
+          </button>
+        </div>
+      </section>
+
+      <!-- SHOP GRID -->
+      <main
+        id="shop"
+        class="container"
+        role="main"
+        aria-labelledby="shop-title"
+      >
+        <h2
+          id="shop-title"
+          style="
+            font-family: 'Garamond', 'Times New Roman', serif;
+            font-size: 20px;
+            margin: 10px 0 14px;
+          "
+        >
+          All Categories
+        </h2>
+        <section id="gridWrap" class="grid" aria-live="polite"></section>
+
+        <div id="noResults" class="empty" style="display: none">
+          No categories match your filters. Try clearing search or filters.
+        </div>
+      </main>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <div class="fab" role="navigation" aria-label="WhatsApp chat">
+      <a
+        id="fabWhatsApp"
+        href="https://wa.me/254713883630"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp with All Bales Machakos"
+      >
+        <!-- WhatsApp SVG -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path
+            d="M20.5 3.5L3.5 20.5"
+            stroke="white"
+            stroke-opacity="0.12"
+            stroke-width="2"
+          />
+          <path
+            d="M20.5 3.5L3.5 20.5"
+            stroke="white"
+            stroke-opacity="0.04"
+            stroke-width="8"
+          />
+          <path
+            fill="white"
+            d="M20.7 3.3c-2.3-2.3-5.5-3.3-9.1-3.1-3.2.2-6.3 1.6-8.5 3.8C-1.5 8.5-1.5 12.8 2.1 17.3l-1.1 3.9 3.9-1.1c4.5 3.6 8.8 3.6 12.8.4 2.2-2.2 3.6-5.3 3.8-8.5.2-3.6-0.8-6.8-3.2-9.1z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Product detail overlay / simulated product page -->
+    <div
+      id="detailOverlay"
+      class="detail-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <button
+        id="closeDetail"
+        class="close-detail"
+        aria-label="Close product details"
+      >
+        ✕
+      </button>
+      <div
+        id="detailSheet"
+        class="detail-sheet container"
+        aria-live="polite"
+      ></div>
+    </div>
+
+    <script>
+      /*******************************
+       * Sample Category Data
+       * (Real build: replace images & copy with real assets)
+       *******************************/
+      const CATEGORIES = [
+        {
+          id: "mens-shirts",
+          title: "Men's Clothing Bales",
+          origin: "UK",
+          type: "clothes",
+          gender: "men",
+          kg: "25-30kg",
+          grade: "A/AA",
+          desc: "Assorted men's shirts, T-shirts and trousers. Good mix of casual and formal wear.",
+          image:
+            "https://images.unsplash.com/photo-1520975687377-0d9f9e0f0e3c?w=1200&q=60",
+        },
+        {
+          id: "ladies-clothes",
+          title: "Ladies' Clothing Bales",
+          origin: "Canada",
+          type: "clothes",
+          gender: "women",
+          kg: "20-28kg",
+          grade: "A",
+          desc: "Mixed ladies' tops, blouses, dresses and skirts — ideal for boutique resellers.",
+          image:
+            "https://images.unsplash.com/photo-1520974735194-4a0d50b3e7b6?w=1200&q=60",
+        },
+        {
+          id: "kids-babies",
+          title: "Kids & Babies Wear Bales",
+          origin: "China",
+          type: "clothes",
+          gender: "kids",
+          kg: "15-20kg",
+          grade: "A",
+          desc: "Soft fabric, baby clothes and toddlers' outfits. Gentle and colorful.",
+          image:
+            "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1200&q=60",
+        },
+        {
+          id: "mixed",
+          title: "Mixed Clothes Bale",
+          origin: "UK",
+          type: "clothes",
+          gender: "mixed",
+          kg: "30-40kg",
+          grade: "Mixed",
+          desc: "Large mixed bale — shirts, trousers, dresses, and some accessories.",
+          image:
+            "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=1200&q=60",
+        },
+        {
+          id: "ladies-dresses",
+          title: "Ladies Dresses Bale",
+          origin: "Scotland",
+          type: "clothes",
+          gender: "women",
+          kg: "18-22kg",
+          grade: "A",
+          desc: "Evening and casual dresses — assorted sizes and styles.",
+          image:
+            "https://images.unsplash.com/photo-1520975695919-7c2d8d5df9ea?w=1200&q=60",
+        },
+        {
+          id: "tshirts",
+          title: "Men & Ladies T-Shirts Bale",
+          origin: "China",
+          type: "clothes",
+          gender: "mixed",
+          kg: "25kg",
+          grade: "A/AA",
+          desc: "Branded and unbranded T-shirts for all seasons.",
+          image:
+            "https://images.unsplash.com/photo-1514996937319-344454492b37?w=1200&q=60",
+        },
+        {
+          id: "pants",
+          title: "Pants & Trousers Bale",
+          origin: "UK",
+          type: "clothes",
+          gender: "mixed",
+          kg: "20-30kg",
+          grade: "A",
+          desc: "Trousers and pants including chinos and casual pants.",
+          image:
+            "https://images.unsplash.com/photo-1514995669114-00b4c2f55a2f?w=1200&q=60",
+        },
+        {
+          id: "jeans",
+          title: "Jeans / Denim Bale",
+          origin: "Canada",
+          type: "clothes",
+          gender: "mixed",
+          kg: "22-28kg",
+          grade: "A/AA",
+          desc: "Denim in various sizes and cuts — high demand for resale.",
+          image:
+            "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=1200&q=60",
+        },
+        {
+          id: "shorts-sports",
+          title: "Shorts & Sportswear Bale",
+          origin: "China",
+          type: "clothes",
+          gender: "mixed",
+          kg: "18-24kg",
+          grade: "A",
+          desc: "Sports shorts, training pants and activewear.",
+          image:
+            "https://images.unsplash.com/photo-1520975695919-7c2d8d5df9ea?w=1200&q=60",
+        },
+        {
+          id: "sweaters",
+          title: "Sweaters, Hoodies & Winter Wear Bale",
+          origin: "Scotland",
+          type: "winter",
+          gender: "mixed",
+          kg: "20-25kg",
+          grade: "A/AA",
+          desc: "Warm winter garments — sweaters, heavy hoodies and jackets.",
+          image:
+            "https://images.unsplash.com/photo-1602810315702-ec3f5b7e1fbc?w=1200&q=60",
+        },
+        {
+          id: "towels",
+          title: "Towels Bale",
+          origin: "China",
+          type: "bedding",
+          gender: "mixed",
+          kg: "25-30kg",
+          grade: "A",
+          desc: "Bath and hand towels, assorted sizes and colors.",
+          image:
+            "https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&q=60",
+        },
+        {
+          id: "bedsheets",
+          title: "Bedsheets Bale",
+          origin: "UK",
+          type: "bedding",
+          gender: "mixed",
+          kg: "18-28kg",
+          grade: "A",
+          desc: "Cotton and mix bedsheets, pillowcases included.",
+          image:
+            "https://images.unsplash.com/photo-1505691723518-36a2f6e5f6d2?w=1200&q=60",
+        },
+        {
+          id: "duvets",
+          title: "Duvets & Blankets Bale",
+          origin: "Canada",
+          type: "bedding",
+          gender: "mixed",
+          kg: "30-36kg",
+          grade: "A",
+          desc: "Duvets, quilts and blankets for homes and hotels.",
+          image:
+            "https://images.unsplash.com/photo-1600180758890-8f6f0c88a2c1?w=1200&q=60",
+        },
+        {
+          id: "underwear",
+          title: "Underwear / Panties Bale",
+          origin: "China",
+          type: "clothes",
+          gender: "women",
+          kg: "12-18kg",
+          grade: "A",
+          desc: "Women's underwear and undergarments in mixed sizes.",
+          image:
+            "https://images.unsplash.com/photo-1520975695919-7c2d8d5df9ea?w=1200&q=60",
+        },
+        {
+          id: "cotton-blouses",
+          title: "Cotton Tops & Blouses Bale",
+          origin: "UK",
+          type: "clothes",
+          gender: "women",
+          kg: "20-24kg",
+          grade: "A",
+          desc: "Soft cotton blouses and shirts, everyday wear.",
+          image:
+            "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1200&q=60",
+        },
+      ];
+
+      /* Utility: escape for whatsapp prefilled text */
+      function waLink(categoryTitle) {
+        const base = "https://wa.me/254713883630";
+        const text = encodeURIComponent(
+          `Hi Gloria, I'm interested in ordering the "${categoryTitle}" bale. Please share price, kg and grade. Thanks!`
+        );
+        return `${base}?text=${text}`;
+      }
+
+      /* Render cards into grid */
+      const gridWrap = document.getElementById("gridWrap");
+      const noResults = document.getElementById("noResults");
+      let activeItems = [...CATEGORIES];
+
+      function createCard(item) {
+        const card = document.createElement("article");
+        card.className = "card";
+        card.setAttribute("data-id", item.id);
+        card.innerHTML = `
+        <div class="media" role="img" aria-label="${item.title}">
+          <img src="${item.image}" alt="${
+          item.title
+        } sample image" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          <div class="badge">${item.origin}</div>
+        </div>
+        <div class="card-content">
+          <h3>${item.title}</h3>
+          <div class="muted">${item.desc}</div>
+          <div class="meta-row">
+            <div class="meta-left">
+              <div class="kg">${item.kg}</div>
+              <div class="origin" style="margin-left:8px">Grade: ${
+                item.grade
+              }</div>
+            </div>
+            <div style="text-align:right;">
+              <div class="tag">${item.gender.toUpperCase()}</div>
+            </div>
+          </div>
+          <div class="card-actions" style="margin-top:auto">
+            <button class="btn btn-sm btn-view" data-action="view" data-id="${
+              item.id
+            }">View Details</button>
+            <a class="btn btn-sm btn-whatsapp" href="${waLink(
+              item.title
+            )}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+          </div>
+        </div>
+      `;
+        return card;
+      }
+
+      function renderGrid(items) {
+        gridWrap.innerHTML = "";
+        if (!items.length) {
+          noResults.style.display = "block";
+          return;
+        }
+        noResults.style.display = "none";
+        const frag = document.createDocumentFragment();
+        items.forEach((i) => frag.appendChild(createCard(i)));
+        gridWrap.appendChild(frag);
+      }
+
+      // initial render
+      renderGrid(CATEGORIES);
+
+      /* FILTER logic */
+      const searchInput = document.getElementById("searchInput");
+      const genderSelect = document.getElementById("genderSelect");
+      const originSelect = document.getElementById("originSelect");
+      const typeSelect = document.getElementById("typeSelect");
+      const clearFilters = document.getElementById("clearFilters");
+
+      function applyFilters() {
+        const q = searchInput.value.trim().toLowerCase();
+        const gender = genderSelect.value;
+        const origin = originSelect.value;
+        const type = typeSelect.value;
+
+        const filtered = CATEGORIES.filter((cat) => {
+          if (
+            gender !== "all" &&
+            cat.gender !== gender &&
+            !(gender === "mixed" && cat.gender === "mixed")
+          )
+            return false;
+          if (origin !== "all" && cat.origin !== origin) return false;
+          if (type !== "all" && cat.type !== type) return false;
+          if (q) {
+            const hay =
+              `${cat.title} ${cat.desc} ${cat.origin} ${cat.gender}`.toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+        activeItems = filtered;
+        renderGrid(filtered);
+        attachCardListeners(); // reattach listeners after re-render
+      }
+
+      searchInput.addEventListener("input", applyFilters);
+      genderSelect.addEventListener("change", applyFilters);
+      originSelect.addEventListener("change", applyFilters);
+      typeSelect.addEventListener("change", applyFilters);
+      clearFilters.addEventListener("click", () => {
+        searchInput.value = "";
+        genderSelect.value = "all";
+        originSelect.value = "all";
+        typeSelect.value = "all";
+        applyFilters();
+      });
+
+      /* Card click handlers -> product detail view */
+      function attachCardListeners() {
+        document.querySelectorAll('[data-action="view"]').forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            const id = e.currentTarget.getAttribute("data-id");
+            openDetail(id);
+          });
+        });
+        // clickable entire card maybe
+        document.querySelectorAll(".card .media img").forEach((img) => {
+          img.addEventListener("click", (e) => {
+            const card = e.currentTarget.closest(".card");
+            if (card) openDetail(card.getAttribute("data-id"));
+          });
+        });
+      }
+      attachCardListeners();
+
+      /* Detail overlay: show full info (simulates separate product page using url fragment) */
+      const detailOverlay = document.getElementById("detailOverlay");
+      const detailSheet = document.getElementById("detailSheet");
+      const closeDetail = document.getElementById("closeDetail");
+
+      function openDetail(id) {
+        const data = CATEGORIES.find((c) => c.id === id);
+        if (!data) return;
+        // push fragment to emulate product page
+        history.pushState({ bale: id }, "", `#bale-${id}`);
+        buildDetail(data);
+        detailOverlay.style.display = "block";
+        detailOverlay.setAttribute("aria-hidden", "false");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function buildDetail(item) {
+        detailSheet.innerHTML = `
+        <div class="detail-media">
+          <img src="${item.image}" alt="${
+          item.title
+        } large" style="width:100%; height:100%; object-fit:cover; border-radius:12px;"/>
+          <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+            <div class="tag">${item.origin}</div>
+            <div class="tag">${item.kg}</div>
+            <div class="tag">Grade: ${item.grade}</div>
+          </div>
+          <div style="margin-top:10px; color:var(--muted); font-weight:700">Sample images are representative. Contact for real photos & stock availability.</div>
+        </div>
+        <div class="detail-meta">
+          <h2 style="color:var(--hot-pink); margin-bottom:6px;">${
+            item.title
+          }</h2>
+          <p class="muted">${item.desc}</p>
+          <div style="display:flex; gap:10px; margin-top:8px; align-items:center; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="${waLink(
+              item.title
+            )}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+            <button id="view-gallery" class="btn btn-outline">Request Real Photos</button>
+            <a class="btn btn-outline" href="#shop" id="backToShop">Back to Shop</a>
+          </div>
+
+          <div style="margin-top:12px; background:linear-gradient(180deg,#fbfbff,#ffffff); padding:12px; border-radius:10px; box-shadow:var(--shadow-sm);">
+            <div style="font-weight:800; margin-bottom:6px">Details</div>
+            <ul style="margin:0; padding-left:18px; color:var(--muted);">
+              <li><strong>Origin:</strong> ${item.origin}</li>
+              <li><strong>Estimated Bale Weight:</strong> ${item.kg}</li>
+              <li><strong>Grade:</strong> ${item.grade}</li>
+              <li><strong>Availability:</strong> Contact on WhatsApp for live stock</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:12px; color:var(--muted)">
+            <strong>Delivery & Supply:</strong> We supply retailers in Machakos, Makueni & Kitui and across East Africa. Shipping details and rates provided on request.
+          </div>
+
+          <div style="margin-top:18px">
+            <div style="font-weight:800; margin-bottom:8px">FAQ</div>
+            <div style="color:var(--muted)">
+              <p style="margin:6px 0"><strong>Q: How do I order?</strong> A: Click 'Order on WhatsApp' and send your request — include quantity and destination.</p>
+              <p style="margin:6px 0"><strong>Q: Can I request specific items inside a bale?</strong> A: Yes — request sample photos and packing details via WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      `;
+        // attach gallery button (placeholder action)
+        const galleryBtn = document.getElementById("view-gallery");
+        galleryBtn.addEventListener("click", () => {
+          alert(
+            "Request sent to WhatsApp — please specify the images you want."
+          ); // placeholder
+          window.open(waLink(`${item.title} (request photos)`), "_blank");
+        });
+      }
+
+      closeDetail.addEventListener("click", closeDetailOverlay);
+      detailOverlay.addEventListener("click", (e) => {
+        if (e.target === detailOverlay) closeDetailOverlay();
+      });
+
+      function closeDetailOverlay() {
+        detailOverlay.style.display = "none";
+        detailOverlay.setAttribute("aria-hidden", "true");
+        // pop state if hash exists
+        if (location.hash.startsWith("#bale-"))
+          history.pushState({}, "", location.pathname);
+      }
+
+      // handle back/forward navigation for product fragments
+      window.addEventListener("popstate", (e) => {
+        // if URL has bale fragment and overlay closed, open it
+        const hash = location.hash;
+        if (hash && hash.startsWith("#bale-")) {
+          const id = hash.replace("#bale-", "");
+          openDetail(id);
+        } else {
+          closeDetailOverlay();
+        }
+      });
+
+      // on load: if there's a hash, open it
+      window.addEventListener("load", () => {
+        if (location.hash && location.hash.startsWith("#bale-")) {
+          const id = location.hash.replace("#bale-", "");
+          setTimeout(() => openDetail(id), 300);
+        }
+      });
+
+      // Accessibility: keyboard close
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeDetailOverlay();
+      });
+
+      /* Re-attach listeners after dynamic changes */
+      // initial call already done after renderGrid
+    </script>
+  </body>
+</html>

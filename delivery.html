@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Delivery Information | All Bales Machakos - Wholesale Mitumba Supplier
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #ff2d7f; /* Hot Pink */
+        --primary-dark: #e0246f;
+        --secondary: #87ceeb; /* Sky Blue */
+        --accent: #ff8c42; /* Burnt Orange */
+        --light: #f9f9f9;
+        --dark: #222222;
+        --gray: #6b7280;
+        --light-gray: #f3f4f6;
+        --border-radius: 12px;
+        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --box-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Jost", sans-serif;
+        color: var(--dark);
+        background-color: var(--light);
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "EB Garamond", serif;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .logo-text {
+        font-family: "EB Garamond", serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--dark);
+      }
+
+      .logo-text span {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        font-size: 18px;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--primary);
+      }
+
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--primary);
+        border-radius: 3px;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: var(--dark);
+        cursor: pointer;
+      }
+
+      /* Delivery Hero */
+      .delivery-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0;
+        text-align: center;
+        margin-bottom: 80px;
+      }
+
+      .delivery-hero h1 {
+        font-size: 52px;
+        margin-bottom: 20px;
+      }
+
+      .delivery-hero p {
+        font-size: 22px;
+        max-width: 800px;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      /* Section Titles */
+      .section-title {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 50px;
+        color: var(--dark);
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background-color: var(--primary);
+        border-radius: 2px;
+      }
+
+      /* Delivery Zones */
+      .delivery-zones {
+        margin-bottom: 80px;
+      }
+
+      .zones-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .zone-card {
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .zone-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--box-shadow-hover);
+      }
+
+      .zone-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        font-size: 32px;
+        color: white;
+      }
+
+      .zone-1 .zone-icon {
+        background-color: var(--primary);
+      }
+
+      .zone-2 .zone-icon {
+        background-color: var(--secondary);
+      }
+
+      .zone-3 .zone-icon {
+        background-color: var(--accent);
+      }
+
+      .zone-card h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: var(--dark);
+      }
+
+      .zone-card p {
+        color: var(--gray);
+        margin-bottom: 20px;
+      }
+
+      .zone-counties {
+        text-align: left;
+        margin-top: 25px;
+        padding-top: 25px;
+        border-top: 1px solid var(--light-gray);
+      }
+
+      .zone-counties h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .zone-counties h4 i {
+        color: var(--primary);
+      }
+
+      .county-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .county-badge {
+        background-color: var(--light-gray);
+        padding: 8px 15px;
+        border-radius: 50px;
+        font-size: 14px;
+        color: var(--dark);
+      }
+
+      /* Delivery Process */
+      .delivery-process {
+        margin-bottom: 80px;
+        background-color: white;
+        padding: 60px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+
+      .process-steps {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 50px;
+      }
+
+      .process-steps::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--light-gray);
+        z-index: 1;
+      }
+
+      .process-step {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        width: 20%;
+      }
+
+      .step-number {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: white;
+        border: 3px solid var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--dark);
+        margin: 0 auto 25px;
+        transition: var(--transition);
+      }
+
+      .process-step.active .step-number {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: white;
+        transform: scale(1.1);
+      }
+
+      .process-step h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: var(--dark);
+      }
+
+      .process-step p {
+        color: var(--gray);
+        font-size: 15px;
+      }
+
+      /* Shipping Costs */
+      .shipping-costs {
+        margin-bottom: 80px;
+      }
+
+      .costs-table-container {
+        overflow-x: auto;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+
+      .costs-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        min-width: 800px;
+      }
+
+      .costs-table thead {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .costs-table th {
+        padding: 20px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .costs-table tbody tr {
+        border-bottom: 1px solid var(--light-gray);
+        transition: var(--transition);
+      }
+
+      .costs-table tbody tr:hover {
+        background-color: rgba(255, 45, 127, 0.05);
+      }
+
+      .costs-table td {
+        padding: 20px;
+        color: var(--gray);
+      }
+
+      .costs-table td:first-child {
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .price-tag {
+        background-color: var(--secondary);
+        color: var(--dark);
+        padding: 6px 15px;
+        border-radius: 50px;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      /* Delivery FAQs */
+      .delivery-faqs {
+        margin-bottom: 80px;
+      }
+
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background-color: white;
+        border-radius: var(--border-radius);
+        margin-bottom: 20px;
+        box-shadow: var(--box-shadow);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        padding: 25px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .faq-question:hover {
+        background-color: rgba(255, 45, 127, 0.05);
+      }
+
+      .faq-question h3 {
+        font-size: 20px;
+        color: var(--dark);
+        margin: 0;
+      }
+
+      .faq-toggle {
+        font-size: 20px;
+        color: var(--primary);
+        transition: var(--transition);
+      }
+
+      .faq-answer {
+        padding: 0 30px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 0 30px 30px;
+        max-height: 500px;
+      }
+
+      .faq-item.active .faq-toggle {
+        transform: rotate(45deg);
+      }
+
+      /* Order Tracking */
+      .order-tracking {
+        margin-bottom: 80px;
+        background: linear-gradient(135deg, var(--secondary), #a8d8ff);
+        padding: 60px;
+        border-radius: var(--border-radius);
+        color: var(--dark);
+        text-align: center;
+      }
+
+      .order-tracking h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: var(--dark);
+      }
+
+      .order-tracking p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .tracking-form {
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 15px;
+      }
+
+      .tracking-input {
+        flex: 1;
+        padding: 18px 20px;
+        border-radius: var(--border-radius);
+        border: none;
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .tracking-button {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 18px 30px;
+        border-radius: var(--border-radius);
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .tracking-button:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-3px);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        padding: 80px 0;
+        text-align: center;
+        color: white;
+        border-radius: var(--border-radius);
+        margin-bottom: 80px;
+      }
+
+      .cta-section h2 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .cta-section p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.9;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: white;
+        color: var(--primary);
+        padding: 18px 40px;
+        border-radius: var(--border-radius);
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        background-color: var(--light);
+      }
+
+      /* WhatsApp Float Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+        background-color: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 34px;
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        z-index: 1000;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .whatsapp-float:hover {
+        background-color: #128c7e;
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 70px 0 30px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .footer-column h3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        color: white;
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 15px;
+      }
+
+      .footer-column ul li a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .footer-column ul li a:hover {
+        color: var(--primary);
+        padding-left: 5px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .contact-item i {
+        color: var(--primary);
+        font-size: 18px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        background-color: var(--primary);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .zones-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 992px) {
+        .process-steps {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
+        }
+
+        .process-steps::before {
+          display: none;
+        }
+
+        .process-step {
+          width: 45%;
+          margin-bottom: 30px;
+        }
+
+        .delivery-process {
+          padding: 40px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 15px 0;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .delivery-hero {
+          padding: 80px 0;
+        }
+
+        .delivery-hero h1 {
+          font-size: 36px;
+        }
+
+        .delivery-hero p {
+          font-size: 18px;
+        }
+
+        .section-title {
+          font-size: 32px;
+        }
+
+        .zones-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .tracking-form {
+          flex-direction: column;
+        }
+
+        .cta-section {
+          padding: 60px 20px;
+        }
+
+        .cta-section h2 {
+          font-size: 32px;
+        }
+
+        .order-tracking {
+          padding: 40px 20px;
+        }
+
+        .whatsapp-float {
+          width: 60px;
+          height: 60px;
+          font-size: 28px;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .delivery-hero h1 {
+          font-size: 28px;
+        }
+
+        .process-step {
+          width: 100%;
+        }
+
+        .zone-card {
+          padding: 30px 20px;
+        }
+
+        .cta-button {
+          padding: 15px 30px;
+          font-size: 16px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .zone-card,
+      .process-step,
+      .faq-item {
+        animation: fadeInUp 0.6s ease forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">AB</div>
+          <div class="logo-text">All <span>Bales</span></div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop Bales</a>
+          <a href="about.html">About</a>
+          <a href="delivery.html" class="active">Delivery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Delivery Hero -->
+    <section class="delivery-hero">
+      <div class="container">
+        <h1>Delivery & Shipping Information</h1>
+        <p>
+          Fast, reliable delivery across Machakos, Makueni, Kitui, and
+          throughout East Africa. We make sure your wholesale mitumba bales
+          reach you safely and on time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Delivery Zones -->
+    <section class="container delivery-zones">
+      <h2 class="section-title">Our Delivery Zones</h2>
+      <div class="zones-grid">
+        <div class="zone-card zone-1">
+          <div class="zone-icon">
+            <i class="fas fa-truck-fast"></i>
+          </div>
+          <h3>Zone 1: Machakos County</h3>
+          <p>
+            Same-day or next-day delivery within Machakos County. Free delivery
+            for orders over 5 bales.
+          </p>
+
+          <div class="zone-counties">
+            <h4><i class="fas fa-map-pin"></i> Covered Areas</h4>
+            <div class="county-list">
+              <span class="county-badge">Machakos Town</span>
+              <span class="county-badge">Athi River</span>
+              <span class="county-badge">Kathiani</span>
+              <span class="county-badge">Kangundo</span>
+              <span class="county-badge">Mwala</span>
+              <span class="county-badge">Yatta</span>
+              <span class="county-badge">Masinga</span>
+              <span class="county-badge">Matungulu</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="zone-card zone-2">
+          <div class="zone-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3>Zone 2: Neighboring Counties</h3>
+          <p>
+            1-2 business days delivery to Makueni and Kitui counties. Reliable
+            service with tracking.
+          </p>
+
+          <div class="zone-counties">
+            <h4><i class="fas fa-map-pin"></i> Covered Areas</h4>
+            <div class="county-list">
+              <span class="county-badge">Makueni County</span>
+              <span class="county-badge">Wote</span>
+              <span class="county-badge">Kibwezi</span>
+              <span class="county-badge">Kitui County</span>
+              <span class="county-badge">Kitui Town</span>
+              <span class="county-badge">Mwingi</span>
+              <span class="county-badge">Kisasi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="zone-card zone-3">
+          <div class="zone-icon">
+            <i class="fas fa-globe-africa"></i>
+          </div>
+          <h3>Zone 3: East Africa</h3>
+          <p>
+            Regional delivery across East Africa. 3-7 business days depending on
+            destination.
+          </p>
+
+          <div class="zone-counties">
+            <h4><i class="fas fa-map-pin"></i> Covered Regions</h4>
+            <div class="county-list">
+              <span class="county-badge">Nairobi</span>
+              <span class="county-badge">Kiambu</span>
+              <span class="county-badge">Nakuru</span>
+              <span class="county-badge">Kisumu</span>
+              <span class="county-badge">Mombasa</span>
+              <span class="county-badge">Kampala (UG)</span>
+              <span class="county-badge">Arusha (TZ)</span>
+              <span class="county-badge">Kigali (RW)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Process -->
+    <section class="container delivery-process">
+      <h2 class="section-title">Our Delivery Process</h2>
+      <div class="process-steps">
+        <div class="process-step active">
+          <div class="step-number">1</div>
+          <h4>Place Your Order</h4>
+          <p>
+            Contact us via WhatsApp or phone to place your order. Confirm bale
+            types, quantities, and delivery address.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h4>Order Confirmation</h4>
+          <p>
+            We'll confirm your order, provide an invoice, and share estimated
+            delivery time based on your location.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h4>Processing & Packaging</h4>
+          <p>
+            We carefully select, grade, and package your bales securely for
+            transportation.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h4>Dispatch & Tracking</h4>
+          <p>
+            Your order is dispatched with our trusted courier partners. We share
+            tracking details with you.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h4>Delivery & Inspection</h4>
+          <p>
+            Your bales arrive at your location. You can inspect before
+            finalizing payment if needed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shipping Costs -->
+    <section class="container shipping-costs">
+      <h2 class="section-title">Shipping Costs & Timelines</h2>
+      <div class="costs-table-container">
+        <table class="costs-table">
+          <thead>
+            <tr>
+              <th>Delivery Zone</th>
+              <th>Delivery Time</th>
+              <th>Cost Per Bale</th>
+              <th>Minimum Order</th>
+              <th>Free Delivery Threshold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Machakos County (Zone 1)</td>
+              <td>Same Day / Next Day</td>
+              <td><span class="price-tag">KES 500</span></td>
+              <td>1 Bale</td>
+              <td>5+ Bales</td>
+            </tr>
+            <tr>
+              <td>Makueni & Kitui (Zone 2)</td>
+              <td>1-2 Business Days</td>
+              <td><span class="price-tag">KES 800</span></td>
+              <td>2 Bales</td>
+              <td>10+ Bales</td>
+            </tr>
+            <tr>
+              <td>Other Kenyan Counties</td>
+              <td>2-4 Business Days</td>
+              <td><span class="price-tag">KES 1,200</span></td>
+              <td>3 Bales</td>
+              <td>15+ Bales</td>
+            </tr>
+            <tr>
+              <td>Uganda (Kampala, Entebbe)</td>
+              <td>4-6 Business Days</td>
+              <td><span class="price-tag">KES 2,500</span></td>
+              <td>5 Bales</td>
+              <td>20+ Bales</td>
+            </tr>
+            <tr>
+              <td>Tanzania (Arusha, Mwanza)</td>
+              <td>5-7 Business Days</td>
+              <td><span class="price-tag">KES 3,000</span></td>
+              <td>5 Bales</td>
+              <td>25+ Bales</td>
+            </tr>
+            <tr>
+              <td>Rwanda (Kigali)</td>
+              <td>5-7 Business Days</td>
+              <td><span class="price-tag">KES 3,500</span></td>
+              <td>5 Bales</td>
+              <td>25+ Bales</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align: center; margin-top: 20px; color: var(--gray)">
+        <em
+          >Note: Prices may vary based on current fuel costs and bale weight.
+          Contact us for exact quotes.</em
+        >
+      </p>
+    </section>
+
+    <!-- Delivery FAQs -->
+    <section class="container delivery-faqs">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I track my order?</h3>
+            <div class="faq-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Once your order is dispatched, we'll send you a tracking number
+              via WhatsApp. You can use this number to track your shipment with
+              our courier partners. For urgent inquiries, you can also contact
+              us directly on WhatsApp for updates.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What payment methods do you accept?</h3>
+            <div class="faq-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We accept M-Pesa, bank transfer, and cash on delivery (for local
+              Machakos deliveries only). For regional orders, payment is
+              required before dispatch via M-Pesa or bank transfer. We'll
+              provide our payment details when you confirm your order.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I cancel or modify my order?</h3>
+            <div class="faq-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              You can modify or cancel your order within 2 hours of
+              confirmation, provided the order hasn't been processed for
+              dispatch. Once processing has begun, changes may incur additional
+              charges. Contact us immediately if you need to make changes to
+              your order.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What happens if my bales are damaged during transit?</h3>
+            <div class="faq-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We pack all bales securely to prevent damage during transit.
+              However, if your bales arrive damaged, please take photos
+              immediately and contact us within 24 hours of delivery. We'll
+              arrange for an inspection and work with you to resolve the issue,
+              which may include replacement or compensation.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you offer bulk discounts?</h3>
+            <div class="faq-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes! We offer tiered discounts for bulk orders. For orders of 10+
+              bales, you get a 5% discount. For 20+ bales, a 10% discount
+              applies. For 50+ bales, contact us for special wholesale pricing.
+              These discounts apply to the bale prices, excluding shipping
+              costs.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How are shipping costs calculated?</h3>
+            <div class="faq-toggle">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Shipping costs are calculated based on your delivery zone, the
+              number of bales ordered, and the total weight. The prices in our
+              table are estimates per standard bale (approx. 45kg). For exact
+              shipping quotes, please contact us with your order details and
+              delivery address.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Tracking -->
+    <section class="container order-tracking">
+      <h2>Track Your Order</h2>
+      <p>
+        Enter your order number or tracking ID to check the status of your
+        delivery.
+      </p>
+      <div class="tracking-form">
+        <input
+          type="text"
+          class="tracking-input"
+          placeholder="Enter Order/Tracking Number"
+        />
+        <button class="tracking-button">
+          <i class="fas fa-search"></i> Track Order
+        </button>
+      </div>
+      <p style="margin-top: 20px; font-size: 16px">
+        Don't have your tracking number?
+        <a
+          href="https://wa.me/254713883630"
+          style="color: var(--primary); font-weight: 600"
+          >Contact us on WhatsApp</a
+        >
+        for assistance.
+      </p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container cta-section">
+      <h2>Ready to Place Your Order?</h2>
+      <p>
+        Get high-quality mitumba bales delivered to your location. Contact us
+        today to discuss your needs and get a custom quote.
+      </p>
+      <a href="https://wa.me/254713883630" class="cta-button" target="_blank">
+        <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+      </a>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254713883630" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>All Bales Machakos</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px">
+              Your trusted wholesale mitumba bale supplier in East Africa.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61577340703055"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://vm.tiktok.com/ZMHwUMSGsp5cc-5SZ5t/"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://wa.me/254713883630"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop Bales</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="delivery.html">Delivery Info</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Bale Categories</h3>
+            <ul>
+              <li><a href="shop.html">Men's Clothing</a></li>
+              <li><a href="shop.html">Ladies' Clothing</a></li>
+              <li><a href="shop.html">Kids & Babies</a></li>
+              <li><a href="shop.html">Beddings & Towels</a></li>
+              <li><a href="shop.html">Winter Wear</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span
+                  >Asante House, 1st Floor, Opposite Susu Centre, Machakos
+                  Town</span
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>0713 883 630</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@allbalesmachakos.co.ke</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy; 2023 All Bales Machakos. All Rights Reserved. | Wholesale
+            Mitumba Bales Supplier
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          navLinks.style.display =
+            navLinks.style.display === "flex" ? "none" : "flex";
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 768) {
+            navLinks.style.display = "flex";
+          } else {
+            navLinks.style.display = "none";
+          }
+        });
+
+        // FAQ toggle functionality
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle("active");
+
+            // Close other FAQs when opening one
+            if (faqItem.classList.contains("active")) {
+              document.querySelectorAll(".faq-item").forEach((item) => {
+                if (item !== faqItem && item.classList.contains("active")) {
+                  item.classList.remove("active");
+                }
+              });
+            }
+          });
+        });
+
+        // Process step animation on scroll
+        const processSteps = document.querySelectorAll(".process-step");
+
+        const animateSteps = () => {
+          const scrollPosition = window.scrollY + window.innerHeight;
+
+          processSteps.forEach((step, index) => {
+            const stepPosition = step.offsetTop;
+
+            if (scrollPosition > stepPosition + 100) {
+              setTimeout(() => {
+                step.classList.add("active");
+              }, index * 300);
+            }
+          });
+        };
+
+        // Initial animation
+        setTimeout(() => {
+          processSteps[0].classList.add("active");
+        }, 500);
+
+        // Animate on scroll
+        window.addEventListener("scroll", animateSteps);
+
+        // Order tracking button functionality
+        const trackButton = document.querySelector(".tracking-button");
+        const trackingInput = document.querySelector(".tracking-input");
+
+        trackButton.addEventListener("click", () => {
+          if (trackingInput.value.trim() === "") {
+            alert("Please enter your order or tracking number.");
+            trackingInput.focus();
+          } else {
+            alert(
+              `In a complete system, this would track order: ${trackingInput.value}\n\nFor now, please contact us on WhatsApp for tracking information.`
+            );
+            trackingInput.value = "";
+          }
+        });
+
+        // Add animation delays to zone cards for staggered effect
+        const zoneCards = document.querySelectorAll(".zone-card");
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        zoneCards.forEach((card, index) => {
+          card.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        faqItems.forEach((item, index) => {
+          item.style.animationDelay = `${index * 0.1}s`;
+        });
+      });
+    </script>
+  </body>
+</html>

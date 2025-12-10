@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Shop All Bales | All Bales Machakos - Wholesale Mitumba Supplier
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #ff2d7f; /* Hot Pink */
+        --primary-dark: #e0246f;
+        --secondary: #87ceeb; /* Sky Blue */
+        --accent: #ff8c42; /* Burnt Orange */
+        --light: #f9f9f9;
+        --dark: #222222;
+        --gray: #6b7280;
+        --light-gray: #f3f4f6;
+        --border-radius: 12px;
+        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --box-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Jost", sans-serif;
+        color: var(--dark);
+        background-color: var(--light);
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "EB Garamond", serif;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .logo-text {
+        font-family: "EB Garamond", serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--dark);
+      }
+
+      .logo-text span {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        font-size: 18px;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--primary);
+      }
+
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--primary);
+        border-radius: 3px;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: var(--dark);
+        cursor: pointer;
+      }
+
+      /* Shop Hero */
+      .shop-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .shop-hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .shop-hero p {
+        font-size: 20px;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .origin-badges {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 40px;
+      }
+
+      .origin-badge {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 500;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Filters */
+      .filters-section {
+        background-color: white;
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        margin-bottom: 50px;
+      }
+
+      .filters-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .filters-title i {
+        color: var(--primary);
+      }
+
+      .filter-group {
+        margin-bottom: 20px;
+      }
+
+      .filter-group h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: var(--gray);
+      }
+
+      .filter-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .filter-btn {
+        padding: 10px 20px;
+        background-color: var(--light-gray);
+        border: none;
+        border-radius: 50px;
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .filter-btn:hover {
+        background-color: var(--secondary);
+        color: var(--dark);
+      }
+
+      .filter-btn.active {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .filter-reset {
+        display: inline-block;
+        margin-top: 20px;
+        color: var(--primary);
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .filter-reset:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+      }
+
+      /* Bale Grid */
+      .bale-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 80px;
+      }
+
+      .bale-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .bale-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--box-shadow-hover);
+      }
+
+      .bale-image {
+        height: 250px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .bale-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .bale-card:hover .bale-image img {
+        transform: scale(1.05);
+      }
+
+      .bale-origin {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 6px 15px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 500;
+        backdrop-filter: blur(5px);
+      }
+
+      .bale-info {
+        padding: 25px;
+      }
+
+      .bale-category {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: var(--dark);
+      }
+
+      .bale-description {
+        color: var(--gray);
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      .bale-details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--light-gray);
+      }
+
+      .bale-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .detail-label {
+        font-size: 14px;
+        color: var(--gray);
+        margin-bottom: 5px;
+      }
+
+      .detail-value {
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .bale-actions {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn {
+        padding: 14px 25px;
+        border-radius: var(--border-radius);
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn-details {
+        background-color: var(--light-gray);
+        color: var(--dark);
+        flex: 1;
+      }
+
+      .btn-details:hover {
+        background-color: var(--secondary);
+      }
+
+      .btn-whatsapp {
+        background-color: #25d366;
+        color: white;
+        flex: 1;
+      }
+
+      .btn-whatsapp:hover {
+        background-color: #128c7e;
+      }
+
+      /* WhatsApp Float Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+        background-color: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 34px;
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        z-index: 1000;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .whatsapp-float:hover {
+        background-color: #128c7e;
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 70px 0 30px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .footer-column h3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        color: white;
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 15px;
+      }
+
+      .footer-column ul li a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .footer-column ul li a:hover {
+        color: var(--primary);
+        padding-left: 5px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .contact-item i {
+        color: var(--primary);
+        font-size: 18px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        background-color: var(--primary);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .bale-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 15px 0;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .shop-hero {
+          padding: 70px 0;
+        }
+
+        .shop-hero h1 {
+          font-size: 36px;
+        }
+
+        .shop-hero p {
+          font-size: 18px;
+        }
+
+        .bale-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .filters-section {
+          padding: 20px;
+        }
+
+        .filter-options {
+          gap: 8px;
+        }
+
+        .filter-btn {
+          padding: 8px 16px;
+          font-size: 14px;
+        }
+
+        .whatsapp-float {
+          width: 60px;
+          height: 60px;
+          font-size: 28px;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .shop-hero h1 {
+          font-size: 28px;
+        }
+
+        .bale-actions {
+          flex-direction: column;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .bale-card {
+        animation: fadeIn 0.5s ease forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">AB</div>
+          <div class="logo-text">All <span>Bales</span></div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html" class="active">Shop Bales</a>
+          <a href="about.html">About</a>
+          <a href="delivery.html">Delivery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Shop Hero Section -->
+    <section class="shop-hero">
+      <div class="container">
+        <h1>Wholesale Mitumba Bales — All Categories</h1>
+        <p>
+          All Bales Machakos | Quality Bales Imported from UK, Canada, China &
+          Scotland
+        </p>
+
+        <div class="origin-badges">
+          <div class="origin-badge">UK Bales</div>
+          <div class="origin-badge">Canada Bales</div>
+          <div class="origin-badge">China Bales</div>
+          <div class="origin-badge">Scotland Bales</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Filters Section -->
+      <section class="filters-section">
+        <h2 class="filters-title">
+          <i class="fas fa-filter"></i> Filter Bales
+        </h2>
+
+        <div class="filter-group">
+          <h4>By Gender</h4>
+          <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="men">Men</button>
+            <button class="filter-btn" data-filter="women">Women</button>
+            <button class="filter-btn" data-filter="kids">Kids</button>
+            <button class="filter-btn" data-filter="mixed">Mixed</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>By Origin</h4>
+          <div class="filter-options">
+            <button class="filter-btn" data-filter="uk">UK</button>
+            <button class="filter-btn" data-filter="canada">Canada</button>
+            <button class="filter-btn" data-filter="china">China</button>
+            <button class="filter-btn" data-filter="scotland">Scotland</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>By Type</h4>
+          <div class="filter-options">
+            <button class="filter-btn" data-filter="clothing">Clothing</button>
+            <button class="filter-btn" data-filter="bedding">Beddings</button>
+            <button class="filter-btn" data-filter="winter">Winter Wear</button>
+            <button class="filter-btn" data-filter="baby">Baby Wear</button>
+            <button class="filter-btn" data-filter="sportswear">
+              Sportswear
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-reset" id="resetFilters">
+          <i class="fas fa-redo-alt"></i> Reset All Filters
+        </div>
+      </section>
+
+      <!-- Bale Grid -->
+      <section class="bale-grid" id="baleGrid">
+        <!-- Bale cards will be dynamically generated here -->
+      </section>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254713883630" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>All Bales Machakos</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px">
+              Your trusted wholesale mitumba bale supplier in East Africa.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61577340703055"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://vm.tiktok.com/ZMHwUMSGsp5cc-5SZ5t/"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://wa.me/254713883630"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop Bales</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="delivery.html">Delivery Info</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Bale Categories</h3>
+            <ul>
+              <li><a href="#">Men's Clothing</a></li>
+              <li><a href="#">Ladies' Clothing</a></li>
+              <li><a href="#">Kids & Babies</a></li>
+              <li><a href="#">Beddings & Towels</a></li>
+              <li><a href="#">Winter Wear</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span
+                  >Asante House, 1st Floor, Opposite Susu Centre, Machakos
+                  Town</span
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>0713 883 630</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@allbalesmachakos.co.ke</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy; 2023 All Bales Machakos. All Rights Reserved. | Wholesale
+            Mitumba Bales Supplier
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Bale Data
+      const bales = [
+        {
+          id: 1,
+          category: "Men's Clothing Bale",
+          description:
+            "Assorted high-quality men's wear including shirts, trousers, jackets, and casual wear.",
+          origin: "UK",
+          type: "clothing",
+          gender: "men",
+          weight: "45-50 kg",
+          items: "200-250 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 2,
+          category: "Ladies' Clothing Bale",
+          description:
+            "Trendy ladies' fashion including blouses, skirts, pants, and contemporary styles.",
+          origin: "Canada",
+          type: "clothing",
+          gender: "women",
+          weight: "40-45 kg",
+          items: "180-220 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 3,
+          category: "Kids & Babies Wear Bale",
+          description:
+            "Colorful and comfortable clothing for children of all ages, from newborns to teens.",
+          origin: "China",
+          type: "clothing",
+          gender: "kids",
+          weight: "30-35 kg",
+          items: "250-300 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 4,
+          category: "Mixed Clothes Bale",
+          description:
+            "Varied mix of clothing items for men, women, and children. Perfect for general retailers.",
+          origin: "UK",
+          type: "clothing",
+          gender: "mixed",
+          weight: "50-55 kg",
+          items: "220-270 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 5,
+          category: "Ladies Dresses Bale",
+          description:
+            "Elegant dresses, from casual summer dresses to formal evening gowns.",
+          origin: "UK",
+          type: "clothing",
+          gender: "women",
+          weight: "35-40 kg",
+          items: "120-150 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 6,
+          category: "Men's & Ladies T-Shirts Bale",
+          description:
+            "High-quality cotton t-shirts for both men and women in various styles and colors.",
+          origin: "China",
+          type: "clothing",
+          gender: "mixed",
+          weight: "40-45 kg",
+          items: "300-350 pcs",
+          season: "Summer",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 7,
+          category: "Pants & Trousers Bale",
+          description:
+            "Assorted pants and trousers for men and women, including formal and casual styles.",
+          origin: "Canada",
+          type: "clothing",
+          gender: "mixed",
+          weight: "45-50 kg",
+          items: "150-180 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 8,
+          category: "Jeans/Denim Bale",
+          description:
+            "Premium denim jeans for men, women, and youth. Various fits and washes available.",
+          origin: "UK",
+          type: "clothing",
+          gender: "mixed",
+          weight: "50-55 kg",
+          items: "100-130 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 9,
+          category: "Shorts & Sportswear Bale",
+          description:
+            "Activewear including shorts, tracksuits, sports jerseys, and fitness clothing.",
+          origin: "China",
+          type: "sportswear",
+          gender: "mixed",
+          weight: "35-40 kg",
+          items: "200-250 pcs",
+          season: "Summer",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 10,
+          category: "Sweaters, Hoodies & Winter Wear Bale",
+          description:
+            "Warm winter clothing including sweaters, hoodies, jackets, and thermal wear.",
+          origin: "Canada",
+          type: "winter",
+          gender: "mixed",
+          weight: "40-45 kg",
+          items: "120-160 pcs",
+          season: "Winter",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 11,
+          category: "Towels Bale",
+          description:
+            "Soft, absorbent towels in various sizes including bath, hand, and face towels.",
+          origin: "China",
+          type: "bedding",
+          gender: "mixed",
+          weight: "30-35 kg",
+          items: "150-200 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 12,
+          category: "Bedsheets Bale",
+          description:
+            "Quality bedsheets in various sizes, materials, and designs for home or resale.",
+          origin: "UK",
+          type: "bedding",
+          gender: "mixed",
+          weight: "35-40 kg",
+          items: "80-120 sets",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 13,
+          category: "Duvets Bale",
+          description:
+            "Warm and comfortable duvets in various sizes and thickness for different seasons.",
+          origin: "Scotland",
+          type: "bedding",
+          gender: "mixed",
+          weight: "40-45 kg",
+          items: "50-70 pcs",
+          season: "Winter",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 14,
+          category: "Underwear/Panties Bale",
+          description:
+            "New underwear and panties in various sizes, styles, and materials.",
+          origin: "China",
+          type: "clothing",
+          gender: "mixed",
+          weight: "25-30 kg",
+          items: "500-600 pcs",
+          season: "All Season",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+        {
+          id: 15,
+          category: "Cotton Tops & Blouses Bale",
+          description:
+            "Lightweight cotton tops and blouses perfect for warm weather and casual wear.",
+          origin: "UK",
+          type: "clothing",
+          gender: "women",
+          weight: "35-40 kg",
+          items: "200-250 pcs",
+          season: "Summer",
+          price: "Contact for price",
+          image:
+            "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80",
+        },
+      ];
+
+      // DOM Elements
+      const baleGrid = document.getElementById("baleGrid");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const resetFiltersButton = document.getElementById("resetFilters");
+
+      // Initialize filters
+      let activeFilters = {
+        gender: "all",
+        origin: "all",
+        type: "all",
+      };
+
+      // Generate bale cards
+      function generateBaleCards(balesToShow) {
+        baleGrid.innerHTML = "";
+
+        balesToShow.forEach((bale) => {
+          const card = document.createElement("div");
+          card.className = "bale-card";
+          card.dataset.gender = bale.gender;
+          card.dataset.origin = bale.origin.toLowerCase();
+          card.dataset.type = bale.type;
+
+          // Calculate animation delay for staggered effect
+          const delay = bale.id * 0.05 + "s";
+          card.style.animationDelay = delay;
+
+          card.innerHTML = `
+                    <div class="bale-image">
+                        <img src="${bale.image}" alt="${bale.category}">
+                        <div class="bale-origin">${bale.origin}</div>
+                    </div>
+                    <div class="bale-info">
+                        <h3 class="bale-category">${bale.category}</h3>
+                        <p class="bale-description">${bale.description}</p>
+                        
+                        <div class="bale-details">
+                            <div class="bale-detail">
+                                <span class="detail-label">Weight</span>
+                                <span class="detail-value">${bale.weight}</span>
+                            </div>
+                            <div class="bale-detail">
+                                <span class="detail-label">Items</span>
+                                <span class="detail-value">${bale.items}</span>
+                            </div>
+                            <div class="bale-detail">
+                                <span class="detail-label">Season</span>
+                                <span class="detail-value">${bale.season}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bale-actions">
+                            <button class="btn btn-details" onclick="viewBaleDetails(${
+                              bale.id
+                            })">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <a href="https://wa.me/254713883630?text=Hi! I'm interested in the ${encodeURIComponent(
+                              bale.category
+                            )}. Can you provide more details?" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Order Now
+                            </a>
+                        </div>
+                    </div>
+                `;
+
+          baleGrid.appendChild(card);
+        });
+      }
+
+      // Filter bales based on active filters
+      function filterBales() {
+        let filteredBales = bales;
+
+        // Apply gender filter
+        if (activeFilters.gender !== "all") {
+          filteredBales = filteredBales.filter(
+            (bale) => bale.gender === activeFilters.gender
+          );
+        }
+
+        // Apply origin filter
+        if (activeFilters.origin !== "all") {
+          filteredBales = filteredBales.filter(
+            (bale) => bale.origin.toLowerCase() === activeFilters.origin
+          );
+        }
+
+        // Apply type filter
+        if (activeFilters.type !== "all") {
+          filteredBales = filteredBales.filter(
+            (bale) => bale.type === activeFilters.type
+          );
+        }
+
+        generateBaleCards(filteredBales);
+
+        // Update filter button active states
+        updateFilterButtons();
+      }
+
+      // Update filter button active states
+      function updateFilterButtons() {
+        filterButtons.forEach((button) => {
+          const filterType =
+            button.parentElement.parentElement.querySelector("h4").textContent;
+          const filterValue = button.dataset.filter;
+
+          // Remove active class from all buttons in the same group
+          if (
+            filterType === "By Gender" &&
+            filterValue === activeFilters.gender
+          ) {
+            button.classList.add("active");
+          } else if (
+            filterType === "By Origin" &&
+            filterValue === activeFilters.origin
+          ) {
+            button.classList.add("active");
+          } else if (
+            filterType === "By Type" &&
+            filterValue === activeFilters.type
+          ) {
+            button.classList.add("active");
+          } else {
+            button.classList.remove("active");
+          }
+
+          // Special case for "All" button in gender filter
+          if (
+            filterType === "By Gender" &&
+            filterValue === "all" &&
+            activeFilters.gender === "all"
+          ) {
+            button.classList.add("active");
+          }
+        });
+      }
+
+      // View bale details (would link to single product page)
+      function viewBaleDetails(baleId) {
+        // In a real application, this would navigate to a single product page
+        alert(
+          `Viewing details for bale #${baleId}. In a complete website, this would navigate to a dedicated product page.`
+        );
+
+        // Example: window.location.href = `bale/${baleId}`;
+      }
+
+      // Initialize the page
+      document.addEventListener("DOMContentLoaded", () => {
+        // Generate initial bale cards
+        generateBaleCards(bales);
+
+        // Set up filter button event listeners
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const filterType =
+              button.parentElement.parentElement.querySelector(
+                "h4"
+              ).textContent;
+            const filterValue = button.dataset.filter;
+
+            // Update active filters
+            if (filterType === "By Gender") {
+              activeFilters.gender = filterValue;
+            } else if (filterType === "By Origin") {
+              activeFilters.origin = filterValue;
+            } else if (filterType === "By Type") {
+              activeFilters.type = filterValue;
+            }
+
+            // Apply filters
+            filterBales();
+          });
+        });
+
+        // Reset filters button
+        resetFiltersButton.addEventListener("click", () => {
+          activeFilters = {
+            gender: "all",
+            origin: "all",
+            type: "all",
+          };
+
+          filterBales();
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          navLinks.style.display =
+            navLinks.style.display === "flex" ? "none" : "flex";
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 768) {
+            navLinks.style.display = "flex";
+          } else {
+            navLinks.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
