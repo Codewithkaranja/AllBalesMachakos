@@ -172,6 +172,8 @@
       .contact-hero h1 {
         font-size: 52px;
         margin-bottom: 20px;
+        color: var(--primary-dark);
+        font-weight: 400;
       }
 
       .contact-hero p {
