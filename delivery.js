@@ -1,22 +1,23 @@
  // Mobile menu functionality
       document.addEventListener("DOMContentLoaded", () => {
-        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-        const navLinks = document.querySelector(".nav-links");
+          // ---------------- Mobile Menu ----------------
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const header = document.querySelector('header');
 
-        mobileMenuBtn.addEventListener("click", () => {
-          navLinks.style.display =
-            navLinks.style.display === "flex" ? "none" : "flex";
-        });
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('show');
+        }
+    });
 
         // Close mobile menu on window resize
-        window.addEventListener("resize", () => {
-          if (window.innerWidth > 768) {
-            navLinks.style.display = "flex";
-          } else {
-            navLinks.style.display = "none";
-          }
-        });
-
+       
+      
         // FAQ toggle functionality
         const faqQuestions = document.querySelectorAll(".faq-question");
 

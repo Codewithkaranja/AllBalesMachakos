@@ -1,1224 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Bales Machakos - Wholesale Mitumba Bales Supplier</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #FF2D7F; /* Hot Pink */
-            --primary-dark: #E0246F;
-            --secondary: #87CEEB; /* Sky Blue */
-            --accent: #FF8C42; /* Burnt Orange */
-            --light: #F9F9F9;
-            --dark: #222222;
-            --gray: #6B7280;
-            --light-gray: #F3F4F6;
-            --border-radius: 12px;
-            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --box-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Jost', sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'EB Garamond', serif;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background-color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .logo-text {
-            font-family: 'EB Garamond', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .logo-text span {
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            font-size: 18px;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary);
-        }
-
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: var(--primary);
-            border-radius: 3px;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: var(--dark);
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 150px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            margin-bottom: 25px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            color: rgba(255,255,255,0.9);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 18px 40px;
-            border-radius: var(--border-radius);
-            font-family: 'Jost', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(255, 45, 127, 0.3);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background-color: white;
-            color: var(--dark);
-            transform: translateY(-5px);
-        }
-
-        .origin-tags {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 50px;
-        }
-
-        .origin-tag {
-            background-color: rgba(255,255,255,0.15);
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: 500;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Featured Categories */
-        .featured-categories {
-            padding: 100px 0;
-            background-color: white;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 42px;
-            margin-bottom: 50px;
-            color: var(--dark);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background-color: var(--primary);
-            border-radius: 2px;
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .category-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .category-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .category-image {
-            height: 200px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .category-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .category-card:hover .category-image img {
-            transform: scale(1.1);
-        }
-
-        .category-content {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .category-content h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        .category-content p {
-            color: var(--gray);
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        .category-link {
-            display: inline-block;
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .category-link:hover {
-            color: var(--primary-dark);
-            transform: translateX(5px);
-        }
-
-        .view-all-container {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .btn-view-all {
-            background-color: var(--light-gray);
-            color: var(--dark);
-            padding: 16px 40px;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-        }
-
-        .btn-view-all:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        /* Why Choose Us */
-        .why-choose-us {
-            padding: 100px 0;
-            background-color: var(--light);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-
-        .feature-card {
-            background-color: white;
-            padding: 50px 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: rgba(255, 45, 127, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            color: var(--primary);
-            font-size: 32px;
-        }
-
-        .feature-card h3 {
-            font-size: 26px;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .feature-card p {
-            color: var(--gray);
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 100px 0;
-            background-color: white;
-        }
-
-        .testimonials-slider {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background-color: var(--light);
-            padding: 50px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            text-align: center;
-            margin: 0 20px;
-        }
-
-        .testimonial-content {
-            font-size: 18px;
-            font-style: italic;
-            color: var(--gray);
-            margin-bottom: 30px;
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .author-info h4 {
-            font-size: 20px;
-            margin-bottom: 5px;
-            color: var(--dark);
-        }
-
-        .author-info p {
-            color: var(--gray);
-            font-size: 15px;
-        }
-
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .nav-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--light-gray);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .nav-dot.active {
-            background-color: var(--primary);
-            transform: scale(1.2);
-        }
-
-        /* TikTok Section */
-        .tiktok-section {
-            padding: 100px 0;
-            background-color: var(--light);
-        }
-
-        .tiktok-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .tiktok-content h2 {
-            font-size: 36px;
-            margin-bottom: 25px;
-            color: var(--dark);
-        }
-
-        .tiktok-content p {
-            color: var(--gray);
-            margin-bottom: 30px;
-            font-size: 18px;
-        }
-
-        .tiktok-embed {
-            background-color: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            text-align: center;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .tiktok-icon {
-            font-size: 80px;
-            color: #000000;
-            margin-bottom: 20px;
-        }
-
-        .tiktok-embed h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        .tiktok-embed p {
-            color: var(--gray);
-            margin-bottom: 30px;
-        }
-
-        .btn-tiktok {
-            background-color: #000000;
-            color: white;
-            padding: 15px 30px;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .btn-tiktok:hover {
-            background-color: #333333;
-            transform: translateY(-3px);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            text-align: center;
-            color: white;
-        }
-
-        .cta-section h2 {
-            font-size: 42px;
-            margin-bottom: 25px;
-        }
-
-        .cta-section p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
-        }
-
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
-            background-color: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 34px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-            z-index: 1000;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 70px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-
-        .footer-column h3 {
-            font-size: 22px;
-            margin-bottom: 25px;
-            color: white;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 15px;
-        }
-
-        .footer-column ul li a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--primary);
-            padding-left: 5px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: rgba(255,255,255,0.7);
-        }
-
-        .contact-item i {
-            color: var(--primary);
-            font-size: 18px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 18px;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .social-icon:hover {
-            background-color: var(--primary);
-            transform: translateY(-5px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.5);
-            font-size: 14px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .categories-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 992px) {
-            .tiktok-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .tiktok-embed {
-                height: 400px;
-            }
-            
-            .hero h1 {
-                font-size: 42px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 15px 0;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero {
-                padding: 100px 0;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero p {
-                font-size: 18px;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .categories-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 32px;
-            }
-            
-            .testimonial-card {
-                padding: 30px;
-            }
-            
-            .whatsapp-float {
-                width: 60px;
-                height: 60px;
-                font-size: 28px;
-                bottom: 20px;
-                right: 20px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 28px;
-            }
-            
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .tiktok-embed {
-                height: 350px;
-                padding: 20px;
-            }
-            
-            .cta-section h2 {
-                font-size: 32px;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .category-card, .feature-card {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-    </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">AB</div>
-                <div class="logo-text">All <span>Bales</span></div>
-            </a>
-            
-            <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="shop.html">Shop Bales</a>
-                <a href="about.html">About</a>
-                <a href="delivery.html">Delivery</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+      <div class="header-bg"></div>
+      <!-- Background image layer -->
+      <div class="container header-container">
+        <a href="index.html" class="logo">
+          <img src="All Bales logo.png" alt="All Bales Logo" class="logo-img" />
+          <!-- Replace with your logo image -->
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="shop.html">Shop Bales</a>
+          <a href="about.html">About</a>
+          <a href="delivery.html">Delivery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-content">
-            <h1>Wholesale Mitumba Bales Supplier in Machakos</h1>
-            <p>All Bales Machakos supplies high-quality second-hand clothing bales imported from UK, Canada, China, and Scotland. We serve retailers across East Africa with premium mitumba at wholesale prices.</p>
-            
-            <div class="hero-buttons">
-                <a href="shop.html" class="btn btn-primary">
-                    <i class="fas fa-shopping-bag"></i> Shop Bales Now
-                </a>
-                <a href="https://wa.me/254713883630" class="btn btn-secondary" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
-                </a>
-            </div>
-            
-            <div class="origin-tags">
-                <div class="origin-tag">
-                    <i class="fas fa-flag-uk"></i> UK Bales
-                </div>
-                <div class="origin-tag">
-                    <i class="fas fa-flag"></i> Canada Bales
-                </div>
-                <div class="origin-tag">
-                    <i class="fas fa-flag"></i> China Bales
-                </div>
-                <div class="origin-tag">
-                    <i class="fas fa-flag"></i> Scotland Bales
-                </div>
-            </div>
+      <div class="hero-bg"></div>
+      <!-- For sliding images -->
+      <div class="container hero-content">
+        <h1>All Bales Machakos</h1>
+        <p>
+          <span id="typewriter"></span>
+        </p>
+
+        <div class="hero-buttons">
+          <a href="shop.html" class="btn btn-primary">
+            <i class="fas fa-shopping-bag"></i> Shop Bales Now
+          </a>
+          <a
+            href="https://wa.me/254713883630"
+            class="btn btn-secondary"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Featured Categories -->
     <section class="featured-categories">
-        <div class="container">
-            <h2 class="section-title">Popular Bale Categories</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Men's Clothing">
-                    </div>
-                    <div class="category-content">
-                        <h3>Men's Clothing</h3>
-                        <p>Shirts, trousers, jackets, and casual wear from UK & Canada</p>
-                        <a href="shop.html#men-bales" class="category-link">Shop Now →</a>
-                    </div>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Ladies' Clothing">
-                    </div>
-                    <div class="category-content">
-                        <h3>Ladies' Clothing</h3>
-                        <p>Blouses, skirts, dresses, and contemporary fashion</p>
-                        <a href="shop.html#women-bales" class="category-link">Shop Now →</a>
-                    </div>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Kids & Babies">
-                    </div>
-                    <div class="category-content">
-                        <h3>Kids & Babies</h3>
-                        <p>Children's clothing from newborns to teens</p>
-                        <a href="shop.html#kids-bales" class="category-link">Shop Now →</a>
-                    </div>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Beddings & Towels">
-                    </div>
-                    <div class="category-content">
-                        <h3>Beddings & Towels</h3>
-                        <p>Quality bedsheets, duvets, and towels for home or resale</p>
-                        <a href="shop.html#bedding-bales" class="category-link">Shop Now →</a>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Popular Bale Categories</h2>
+        <div class="categories-grid">
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                alt="Men's Clothing"
+              />
             </div>
-            
-            <div class="view-all-container">
-                <a href="shop.html" class="btn-view-all">
-                    <i class="fas fa-th-large"></i> View All Categories
-                </a>
+            <div class="category-content">
+              <h3>Men's Clothing</h3>
+              <p>Shirts, trousers, jackets, and casual wear from UK & Canada</p>
+              <a href="shop.html#men-bales" class="category-link">Shop Now →</a>
             </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                alt="Ladies' Clothing"
+              />
+            </div>
+            <div class="category-content">
+              <h3>Ladies' Clothing</h3>
+              <p>Blouses, skirts, dresses, and contemporary fashion</p>
+              <a href="shop.html#women-bales" class="category-link"
+                >Shop Now →</a
+              >
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                alt="Kids & Babies"
+              />
+            </div>
+            <div class="category-content">
+              <h3>Kids & Babies</h3>
+              <p>Children's clothing from newborns to teens</p>
+              <a href="shop.html#kids-bales" class="category-link"
+                >Shop Now →</a
+              >
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <img
+                src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+                alt="Beddings & Towels"
+              />
+            </div>
+            <div class="category-content">
+              <h3>Beddings & Towels</h3>
+              <p>Quality bedsheets, duvets, and towels for home or resale</p>
+              <a href="shop.html#bedding-bales" class="category-link"
+                >Shop Now →</a
+              >
+            </div>
+          </div>
         </div>
+
+        <div class="view-all-container">
+          <a href="shop.html" class="btn-view-all">
+            <i class="fas fa-th-large"></i> View All Categories
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Why Choose Us -->
     <section class="why-choose-us">
-        <div class="container">
-            <h2 class="section-title">Why Choose All Bales Machakos</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe-africa"></i>
-                    </div>
-                    <h3>International Sourcing</h3>
-                    <p>We import directly from UK, Canada, China, and Scotland to ensure diverse, high-quality inventory for our customers.</p>
+      <div class="container">
+        <h2 class="section-title">Why Choose All Bales Machakos</h2>
+
+        <!-- Swiper -->
+        <div class="swiper myWhySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-globe-africa"></i>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Quality Grading</h3>
-                    <p>Every bale is carefully graded (A, AA, Cream) and sorted to ensure you get exactly what you pay for.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3>Reliable Delivery</h3>
-                    <p>We deliver across Machakos, Makueni, Kitui, and throughout East Africa with secure, trackable shipping.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Customer Support</h3>
-                    <p>Our team is available via WhatsApp and phone to assist with orders, inquiries, and after-sales support.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Trusted Relationships</h3>
-                    <p>We build long-term partnerships with our customers, offering consistent quality and fair pricing.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-tags"></i>
-                    </div>
-                    <h3>Competitive Pricing</h3>
-                    <p>We offer wholesale prices that allow retailers to maintain healthy profit margins on resale.</p>
-                </div>
+                <h3>International Sourcing</h3>
+                <p>
+                  We import directly from UK, Canada, China, and Scotland...
+                </p>
+              </div>
             </div>
+
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-award"></i></div>
+                <h3>Quality Grading</h3>
+                <p>Every bale is carefully graded (A, AA, Cream)...</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                <h3>Reliable Delivery</h3>
+                <p>
+                  We deliver across Machakos, Makueni, Kitui, and East Africa...
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                <h3>Customer Support</h3>
+                <p>Our team is available via WhatsApp and phone...</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Trusted Relationships</h3>
+                <p>We build long-term partnerships with our customers...</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                <h3>Competitive Pricing</h3>
+                <p>
+                  We offer wholesale prices that keep retailers profitable...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
     <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        "I've been buying from All Bales Machakos for over a year now. The quality of their UK bales is consistently excellent, and their delivery to Makueni is always on time. My boutique customers love the items I get from them!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div class="author-info">
-                            <h4>Sarah Muthoni</h4>
-                            <p>Boutique Owner, Makueni</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-nav">
-                    <div class="nav-dot active"></div>
-                    <div class="nav-dot"></div>
-                    <div class="nav-dot"></div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-slider">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "I've been buying from All Bales Machakos for over a year now. The
+              quality of their UK bales is consistently excellent, and their
+              delivery to Makueni is always on time. My boutique customers love
+              the items I get from them!"
             </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">SM</div>
+              <div class="author-info">
+                <h4>Sarah Mutinda</h4>
+                <p>Boutique Owner, Makueni</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-nav">
+            <div class="nav-dot active"></div>
+            <div class="nav-dot"></div>
+            <div class="nav-dot"></div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- TikTok Section -->
     <section class="tiktok-section">
-        <div class="container">
-            <div class="tiktok-container">
-                <div class="tiktok-content">
-                    <h2>See Our Bales in Action</h2>
-                    <p>Follow us on TikTok to see video showcases of our latest bale arrivals, behind-the-scenes at our warehouse, and customer testimonials.</p>
-                    <p>Watch as we unbox new shipments, grade bales, and show you exactly what you can expect when you order from All Bales Machakos.</p>
-                    <a href="https://vm.tiktok.com/ZMHwUMSGsp5cc-5SZ5t/" class="btn-tiktok" target="_blank">
-                        <i class="fab fa-tiktok"></i> Follow Us on TikTok
-                    </a>
-                </div>
-                
-                <div class="tiktok-embed">
-                    <div class="tiktok-icon">
-                        <i class="fab fa-tiktok"></i>
-                    </div>
-                    <h3>@AllBalesMachakos</h3>
-                    <p>Follow us for daily bale showcases, business tips, and customer success stories.</p>
-                    <a href="https://vm.tiktok.com/ZMHwUMSGsp5cc-5SZ5t/" class="btn-tiktok" target="_blank">
-                        <i class="fab fa-tiktok"></i> Visit Our TikTok
-                    </a>
-                </div>
+      <div class="container">
+        <div class="tiktok-container">
+          <div class="tiktok-content">
+            <h2>See Our Bales in Action</h2>
+            <p>
+              Follow us on TikTok to see video showcases of our latest bale
+              arrivals, behind-the-scenes at our warehouse, and customer
+              testimonials.
+            </p>
+            <p>
+              Watch as we unbox new shipments, grade bales, and show you exactly
+              what you can expect when you order from All Bales Machakos.
+            </p>
+            <a
+              href="https://vm.tiktok.com/ZMHwUMSGsp5cc-5SZ5t/"
+              class="btn-tiktok"
+              target="_blank"
+            >
+              <i class="fab fa-tiktok"></i> Follow Us on TikTok
+            </a>
+          </div>
+
+          <div class="tiktok-embed">
+            <div class="tiktok-icon">
+              <i class="fab fa-tiktok"></i>
             </div>
+            <h3>@AllBalesMachakos</h3>
+            <p>
+              Follow us for daily bale showcases, business tips, and customer
+              success stories.
+            </p>
+            <a
+              href="https://vm.tiktok.com/ZMHwUMSGsp5cc-5SZ5t/"
+              class="btn-tiktok"
+              target="_blank"
+            >
+              <i class="fab fa-tiktok"></i> Visit Our TikTok
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Start Your Wholesale Business?</h2>
-            <p>Join hundreds of successful retailers who trust All Bales Machakos for their mitumba supply needs. Get high-quality bales at competitive prices delivered to your location.</p>
-            <a href="https://wa.me/254713883630" class="btn btn-primary" target="_blank">
-                <i class="fab fa-whatsapp"></i> Start Your Order on WhatsApp
-            </a>
-        </div>
+      <div class="container">
+        <h2>Ready to Start Your Wholesale Business?</h2>
+        <p>
+          Join hundreds of successful retailers who trust All Bales Machakos for
+          their mitumba supply needs. Get high-quality bales at competitive
+          prices delivered to your location.
+        </p>
+        <a
+          href="https://wa.me/254713883630"
+          class="btn btn-primary"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i> Start Your Order on WhatsApp
+        </a>
+      </div>
     </section>
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/254713883630" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>All Bales Machakos</h3>
-                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Your trusted wholesale mitumba bale supplier in East Africa.</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=61577340703055" class="social-icon" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://vm.tiktok.com/ZMHwUMSGsp5cc-5SZ5t/" class="social-icon" target="_blank">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="https://wa.me/254713883630" class="social-icon" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop Bales</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="delivery.html">Delivery Info</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Bale Categories</h3>
-                    <ul>
-                        <li><a href="shop.html#men-bales">Men's Clothing</a></li>
-                        <li><a href="shop.html#women-bales">Ladies' Clothing</a></li>
-                        <li><a href="shop.html#kids-bales">Kids & Babies</a></li>
-                        <li><a href="shop.html#bedding-bales">Beddings & Towels</a></li>
-                        <li><a href="shop.html#winter-bales">Winter Wear</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Asante House, 1st Floor, Opposite Susu Centre, Machakos Town</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>0713 883 630</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@allbalesmachakos.co.ke</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>All Bales Machakos</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px">
+              Your trusted wholesale mitumba bale supplier in East Africa.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61577340703055"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://vm.tiktok.com/ZMHwUMSGsp5cc-5SZ5t/"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://wa.me/254713883630"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 All Bales Machakos. All Rights Reserved. | Wholesale Mitumba Bales Supplier</p>
-            </div>
-        </div>
-    </footer>
+          </div>
 
-    <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navLinks = document.querySelector('.nav-links');
-            
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            });
-            
-            // Close mobile menu on window resize
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    navLinks.style.display = 'flex';
-                } else {
-                    navLinks.style.display = 'none';
-                }
-            });
-            
-            // Testimonial slider functionality
-            const testimonials = [
-                {
-                    content: "I've been buying from All Bales Machakos for over a year now. The quality of their UK bales is consistently excellent, and their delivery to Makueni is always on time. My boutique customers love the items I get from them!",
-                    name: "Sarah Muthoni",
-                    role: "Boutique Owner, Makueni",
-                    initials: "SM"
-                },
-                {
-                    content: "As a new retailer, I was nervous about wholesale suppliers. All Bales Machakos made the process easy. Their WhatsApp ordering is convenient, and they helped me choose the right bales for my target market. Highly recommended!",
-                    name: "James Kiprop",
-                    role: "Hawker, Machakos Town",
-                    initials: "JK"
-                },
-                {
-                    content: "The winter wear bales from Canada are top quality! I ordered 5 bales for my shop, and every item was in excellent condition. The pricing is fair, and the delivery was faster than expected. Will definitely order again.",
-                    name: "Mercy Wanjiku",
-                    role: "Shop Owner, Kitui",
-                    initials: "MW"
-                }
-            ];
-            
-            const testimonialCard = document.querySelector('.testimonial-card');
-            const navDots = document.querySelectorAll('.nav-dot');
-            let currentTestimonial = 0;
-            
-            function updateTestimonial(index) {
-                const testimonial = testimonials[index];
-                testimonialCard.innerHTML = `
-                    <div class="testimonial-content">
-                        "${testimonial.content}"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">${testimonial.initials}</div>
-                        <div class="author-info">
-                            <h4>${testimonial.name}</h4>
-                            <p>${testimonial.role}</p>
-                        </div>
-                    </div>
-                `;
-                
-                // Update active dot
-                navDots.forEach((dot, i) => {
-                    if (i === index) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
-            }
-            
-            // Set up dot navigation
-            navDots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentTestimonial = index;
-                    updateTestimonial(currentTestimonial);
-                });
-            });
-            
-            // Auto-rotate testimonials
-            setInterval(() => {
-                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-                updateTestimonial(currentTestimonial);
-            }, 5000);
-            
-            // Add animation delays to cards for staggered effect
-            const categoryCards = document.querySelectorAll('.category-card');
-            const featureCards = document.querySelectorAll('.feature-card');
-            
-            categoryCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.15}s`;
-            });
-            
-            featureCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
-            });
-        });
-    </script>
-</body>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop Bales</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="delivery.html">Delivery Info</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Bale Categories</h3>
+            <ul>
+              <li><a href="shop.html#men-bales">Men's Clothing</a></li>
+              <li><a href="shop.html#women-bales">Ladies' Clothing</a></li>
+              <li><a href="shop.html#kids-bales">Kids & Babies</a></li>
+              <li><a href="shop.html#bedding-bales">Beddings & Towels</a></li>
+              <li><a href="shop.html#winter-bales">Winter Wear</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span
+                  >Asante House, 1st Floor, Opposite Susu Centre, Machakos
+                  Town</span
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>0713 883 630</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@allbalesmachakos.co.ke</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy; 2025 All Bales Machakos. All Rights Reserved. | Wholesale
+            Mitumba Bales Supplier
+          </p>
+          <p style="margin: 0; font-size: 13px; color: #777">
+            Crafted with <span style="color: red">❤</span> by
+            <a
+              href="https://codewithkaranja.github.io/createmodafrica/"
+              target="_blank"
+              rel="noopener"
+              style="color: goldenrod; text-decoration: none; font-weight: 500"
+            >
+              CreateModAfrica
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

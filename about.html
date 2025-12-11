@@ -14,734 +14,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <style>
-      :root {
-        --primary: #ff2d7f; /* Hot Pink */
-        --primary-dark: #e0246f;
-        --secondary: #87ceeb; /* Sky Blue */
-        --accent: #ff8c42; /* Burnt Orange */
-        --light: #f9f9f9;
-        --dark: #222222;
-        --gray: #6b7280;
-        --light-gray: #f3f4f6;
-        --border-radius: 12px;
-        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        --box-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
-        --transition: all 0.3s ease;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Jost", sans-serif;
-        color: var(--dark);
-        background-color: var(--light);
-        line-height: 1.6;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
-        font-family: "EB Garamond", serif;
-        font-weight: 600;
-        line-height: 1.3;
-      }
-
-      .container {
-        width: 100%;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Header */
-      header {
-        background-color: white;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-
-      .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        text-decoration: none;
-      }
-
-      .logo-icon {
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .logo-text {
-        font-family: "EB Garamond", serif;
-        font-size: 28px;
-        font-weight: 700;
-        color: var(--dark);
-      }
-
-      .logo-text span {
-        color: var(--primary);
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 30px;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: var(--dark);
-        font-weight: 500;
-        font-size: 18px;
-        transition: var(--transition);
-        position: relative;
-      }
-
-      .nav-links a:hover,
-      .nav-links a.active {
-        color: var(--primary);
-      }
-
-      .nav-links a.active::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: var(--primary);
-        border-radius: 3px;
-      }
-
-      .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 24px;
-        color: var(--dark);
-        cursor: pointer;
-      }
-
-      /* About Hero */
-      .about-hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 120px 0;
-        text-align: center;
-        margin-bottom: 80px;
-      }
-
-      .about-hero h1 {
-        font-size: 52px;
-        margin-bottom: 20px;
-      }
-
-      .about-hero p {
-        font-size: 22px;
-        max-width: 800px;
-        margin: 0 auto;
-        color: rgba(255, 255, 255, 0.9);
-      }
-
-      /* Mission & Vision */
-      .mission-vision {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        margin-bottom: 80px;
-      }
-
-      .mission-card,
-      .vision-card {
-        background-color: white;
-        padding: 50px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .mission-card::before,
-      .vision-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 6px;
-        height: 100%;
-      }
-
-      .mission-card::before {
-        background-color: var(--primary);
-      }
-
-      .vision-card::before {
-        background-color: var(--secondary);
-      }
-
-      .mission-card h2,
-      .vision-card h2 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        color: var(--dark);
-      }
-
-      .mission-card p,
-      .vision-card p {
-        font-size: 18px;
-        color: var(--gray);
-      }
-
-      .icon-wrapper {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 30px;
-      }
-
-      .mission-card .icon-wrapper {
-        background-color: rgba(255, 45, 127, 0.1);
-        color: var(--primary);
-      }
-
-      .vision-card .icon-wrapper {
-        background-color: rgba(135, 206, 235, 0.1);
-        color: var(--secondary);
-      }
-
-      /* Our Story */
-      .our-story {
-        margin-bottom: 80px;
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 42px;
-        margin-bottom: 50px;
-        color: var(--dark);
-        position: relative;
-      }
-
-      .section-title::after {
-        content: "";
-        position: absolute;
-        bottom: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 4px;
-        background-color: var(--primary);
-        border-radius: 2px;
-      }
-
-      .story-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-      }
-
-      .story-text {
-        font-size: 18px;
-        color: var(--gray);
-      }
-
-      .story-text p {
-        margin-bottom: 25px;
-      }
-
-      .story-image {
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        box-shadow: var(--box-shadow);
-        height: 500px;
-      }
-
-      .story-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: var(--transition);
-      }
-
-      .story-image:hover img {
-        transform: scale(1.05);
-      }
-
-      /* Why Choose Us */
-      .why-choose-us {
-        margin-bottom: 80px;
-      }
-
-      .features-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-      }
-
-      .feature-card {
-        background-color: white;
-        padding: 40px 30px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        text-align: center;
-        transition: var(--transition);
-      }
-
-      .feature-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--box-shadow-hover);
-      }
-
-      .feature-icon {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background-color: rgba(255, 140, 66, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 25px;
-        color: var(--accent);
-        font-size: 28px;
-      }
-
-      .feature-card h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        color: var(--dark);
-      }
-
-      .feature-card p {
-        color: var(--gray);
-      }
-
-      /* Our Values */
-      .our-values {
-        margin-bottom: 80px;
-      }
-
-      .values-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-      }
-
-      .value-card {
-        text-align: center;
-        padding: 30px 20px;
-        background-color: white;
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        transition: var(--transition);
-      }
-
-      .value-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--box-shadow-hover);
-      }
-
-      .value-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: rgba(255, 45, 127, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 20px;
-        color: var(--primary);
-        font-size: 24px;
-      }
-
-      .value-card h4 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        color: var(--dark);
-      }
-
-      .value-card p {
-        color: var(--gray);
-        font-size: 15px;
-      }
-
-      /* Location */
-      .location-section {
-        margin-bottom: 80px;
-      }
-
-      .location-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-      }
-
-      .location-info h3 {
-        font-size: 32px;
-        margin-bottom: 25px;
-        color: var(--dark);
-      }
-
-      .location-details {
-        margin-bottom: 30px;
-      }
-
-      .location-detail {
-        display: flex;
-        align-items: flex-start;
-        gap: 15px;
-        margin-bottom: 20px;
-      }
-
-      .location-detail i {
-        color: var(--primary);
-        font-size: 20px;
-        margin-top: 5px;
-      }
-
-      .map-container {
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        box-shadow: var(--box-shadow);
-        height: 400px;
-      }
-
-      .map-container iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-
-      /* CTA Section */
-      .cta-section {
-        background: linear-gradient(135deg, var(--primary), var(--accent));
-        padding: 80px 0;
-        text-align: center;
-        color: white;
-        border-radius: var(--border-radius);
-        margin-bottom: 80px;
-      }
-
-      .cta-section h2 {
-        font-size: 42px;
-        margin-bottom: 20px;
-      }
-
-      .cta-section p {
-        font-size: 20px;
-        margin-bottom: 40px;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        opacity: 0.9;
-      }
-
-      .cta-button {
-        display: inline-block;
-        background-color: white;
-        color: var(--primary);
-        padding: 18px 40px;
-        border-radius: var(--border-radius);
-        font-size: 18px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: var(--transition);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .cta-button:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        background-color: var(--light);
-      }
-
-      /* WhatsApp Float Button */
-      .whatsapp-float {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 70px;
-        height: 70px;
-        background-color: #25d366;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 34px;
-        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-        z-index: 1000;
-        transition: var(--transition);
-        text-decoration: none;
-      }
-
-      .whatsapp-float:hover {
-        background-color: #128c7e;
-        transform: scale(1.1);
-        box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
-      }
-
-      /* Footer */
-      footer {
-        background-color: var(--dark);
-        color: white;
-        padding: 70px 0 30px;
-      }
-
-      .footer-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
-        margin-bottom: 50px;
-      }
-
-      .footer-column h3 {
-        font-size: 22px;
-        margin-bottom: 25px;
-        color: white;
-      }
-
-      .footer-column ul {
-        list-style: none;
-      }
-
-      .footer-column ul li {
-        margin-bottom: 15px;
-      }
-
-      .footer-column ul li a {
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
-        transition: var(--transition);
-      }
-
-      .footer-column ul li a:hover {
-        color: var(--primary);
-        padding-left: 5px;
-      }
-
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .contact-item i {
-        color: var(--primary);
-        font-size: 18px;
-      }
-
-      .social-icons {
-        display: flex;
-        gap: 15px;
-        margin-top: 20px;
-      }
-
-      .social-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 18px;
-        transition: var(--transition);
-        text-decoration: none;
-      }
-
-      .social-icon:hover {
-        background-color: var(--primary);
-        transform: translateY(-5px);
-      }
-
-      .copyright {
-        text-align: center;
-        padding-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 14px;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 1200px) {
-        .features-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .values-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .footer-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (max-width: 992px) {
-        .mission-vision {
-          grid-template-columns: 1fr;
-        }
-
-        .story-content {
-          grid-template-columns: 1fr;
-        }
-
-        .location-content {
-          grid-template-columns: 1fr;
-        }
-
-        .story-image {
-          height: 400px;
-          order: -1;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .header-container {
-          padding: 15px 0;
-        }
-
-        .nav-links {
-          display: none;
-        }
-
-        .mobile-menu-btn {
-          display: block;
-        }
-
-        .about-hero {
-          padding: 80px 0;
-        }
-
-        .about-hero h1 {
-          font-size: 36px;
-        }
-
-        .about-hero p {
-          font-size: 18px;
-        }
-
-        .section-title {
-          font-size: 32px;
-        }
-
-        .mission-card,
-        .vision-card {
-          padding: 30px;
-        }
-
-        .features-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .values-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .cta-section {
-          padding: 60px 20px;
-        }
-
-        .cta-section h2 {
-          font-size: 32px;
-        }
-
-        .whatsapp-float {
-          width: 60px;
-          height: 60px;
-          font-size: 28px;
-          bottom: 20px;
-          right: 20px;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .about-hero h1 {
-          font-size: 28px;
-        }
-
-        .mission-card h2,
-        .vision-card h2 {
-          font-size: 26px;
-        }
-
-        .cta-button {
-          padding: 15px 30px;
-          font-size: 16px;
-        }
-
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* Animation */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .mission-card,
-      .vision-card,
-      .feature-card,
-      .value-card {
-        animation: fadeInUp 0.6s ease forwards;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="about.css" />
   </head>
   <body>
     <!-- Header -->
     <header>
+      <div class="header-bg"></div>
+      <!-- Background image layer -->
       <div class="container header-container">
         <a href="index.html" class="logo">
-          <div class="logo-icon">AB</div>
-          <div class="logo-text">All <span>Bales</span></div>
+          <img src="All Bales logo.png" alt="All Bales Logo" class="logo-img" />
+          <!-- Replace with your logo image -->
         </a>
 
         <nav class="nav-links">
@@ -829,7 +117,7 @@
 
         <div class="story-image">
           <img
-            src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            src="https://scontent.fnbo13-1.fna.fbcdn.net/v/t39.30808-6/510951880_1452565289489877_3919851465008954953_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFQTD-Xu58yckVO4k6mLHa6D_pDv7OafOUP-kO_s5p85W6OolcszMRZVHA3yvT_Ay7mTili4FBxw3G7yqF0uvzy&_nc_ohc=Atlrw6DwY68Q7kNvwH13jZm&_nc_oc=AdnakP_mwYE0EaKErYlLvCAenPvf8xmig3PCUUD_-5EeSwWyPBMwkoGLbeJI7l8ISv8&_nc_zt=23&_nc_ht=scontent.fnbo13-1.fna&_nc_gid=KR-xMv3RJ8NO8LPu2DBvqw&oh=00_Afn69SSWqy_8InZTvPBm0e0GsAVAQ9iur19A3nQeR8pumw&oe=6940143F"
             alt="Gloria Nzisa at her warehouse"
           />
         </div>
@@ -837,73 +125,92 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="container why-choose-us">
-      <h2 class="section-title">Why Choose All Bales Machakos</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-globe-africa"></i>
-          </div>
-          <h3>International Sourcing</h3>
-          <p>
-            We source directly from the UK, Canada, China, and Scotland to
-            ensure diverse, high-quality inventory.
-          </p>
-        </div>
+    <section class="why-choose-us">
+      <div class="container">
+        <h2 class="section-title">Why Choose All Bales Machakos</h2>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-award"></i>
-          </div>
-          <h3>Quality Grading</h3>
-          <p>
-            Every bale is carefully graded (A, AA, Cream) to ensure you get
-            exactly what you pay for.
-          </p>
-        </div>
+        <!-- Swiper Wrapper -->
+        <div class="swiper myWhyChooseSwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-globe-africa"></i>
+                </div>
+                <h3>International Sourcing</h3>
+                <p>
+                  We source directly from the UK, Canada, China, and Scotland to
+                  ensure diverse, high-quality inventory.
+                </p>
+              </div>
+            </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shipping-fast"></i>
-          </div>
-          <h3>Reliable Delivery</h3>
-          <p>
-            We deliver across East Africa with secure, trackable shipping
-            options for your convenience.
-          </p>
-        </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-award"></i></div>
+                <h3>Quality Grading</h3>
+                <p>
+                  Every bale is carefully graded (A, AA, Cream) to ensure you
+                  get exactly what you pay for.
+                </p>
+              </div>
+            </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3>Trusted Relationships</h3>
-          <p>
-            We build long-term partnerships with our customers, offering
-            consistent quality and fair pricing.
-          </p>
-        </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3>Reliable Delivery</h3>
+                <p>
+                  We deliver across East Africa with secure, trackable shipping
+                  options for your convenience.
+                </p>
+              </div>
+            </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h3>Customer Support</h3>
-          <p>
-            Our team is available via WhatsApp and phone to assist with orders,
-            inquiries, and after-sales support.
-          </p>
-        </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Trusted Relationships</h3>
+                <p>
+                  We build long-term partnerships with customers, offering
+                  consistent quality and fair pricing.
+                </p>
+              </div>
+            </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-tags"></i>
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                <h3>Customer Support</h3>
+                <p>
+                  Our team is available via WhatsApp and phone to assist with
+                  inquiries and after-sales support.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="swiper-slide">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                <h3>Competitive Pricing</h3>
+                <p>
+                  We offer wholesale prices that allow retailers to maintain
+                  healthy profit margins.
+                </p>
+              </div>
+            </div>
           </div>
-          <h3>Competitive Pricing</h3>
-          <p>
-            We offer wholesale prices that allow retailers to maintain healthy
-            profit margins.
-          </p>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -1113,45 +420,25 @@
 
         <div class="copyright">
           <p>
-            &copy; 2023 All Bales Machakos. All Rights Reserved. | Wholesale
+            &copy; 2025 All Bales Machakos. All Rights Reserved. | Wholesale
             Mitumba Bales Supplier
+          </p>
+          <p style="margin: 0; font-size: 13px; color: #777">
+            Crafted with <span style="color: red">❤</span> by
+            <a
+              href="https://codewithkaranja.github.io/createmodafrica/"
+              target="_blank"
+              rel="noopener"
+              style="color: goldenrod; text-decoration: none; font-weight: 500"
+            >
+              CreateModAfrica
+            </a>
           </p>
         </div>
       </div>
     </footer>
 
-    <script>
-      // Mobile menu functionality
-      document.addEventListener("DOMContentLoaded", () => {
-        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-        const navLinks = document.querySelector(".nav-links");
-
-        mobileMenuBtn.addEventListener("click", () => {
-          navLinks.style.display =
-            navLinks.style.display === "flex" ? "none" : "flex";
-        });
-
-        // Close mobile menu on window resize
-        window.addEventListener("resize", () => {
-          if (window.innerWidth > 768) {
-            navLinks.style.display = "flex";
-          } else {
-            navLinks.style.display = "none";
-          }
-        });
-
-        // Add animation delays to feature cards for staggered effect
-        const featureCards = document.querySelectorAll(".feature-card");
-        const valueCards = document.querySelectorAll(".value-card");
-
-        featureCards.forEach((card, index) => {
-          card.style.animationDelay = `${index * 0.1}s`;
-        });
-
-        valueCards.forEach((card, index) => {
-          card.style.animationDelay = `${index * 0.1}s`;
-        });
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="about.js"></script>
   </body>
 </html>
